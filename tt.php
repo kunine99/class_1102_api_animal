@@ -1,6 +1,8 @@
 <?php
 
 
-$a=file_get_contents("https://data.taipei/api/v1/dataset/f5cce1b8-fbef-4532-9a32-53766c28403c?scope=resourceAquire
+$a=file_get_contents("https://quality.data.gov.tw/dq_download_json.php?nid=8792&md5_url=dd6c0bd09f95d4774adc44310f059b13
 ");
 echo $a;
+
+
