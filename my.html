@@ -15,31 +15,36 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!-- 搜尋datatable cdn選manual裡的installation裡的CDN的第2行css部分-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
-<style>
-
-*{
-    background-image: url(https://img.freepik.com/free-vector/animal-pattern-background-colorful-seamless-line-art-design-vector_53876-151381.jpg?t=st=1645768900~exp=1645769500~hmac=751fc86c66f80dbf80577dcc99673f40e91e5400ba307fc026425c2e44b5a9a0&w=1380);
-}
-</style>
+    <style>
+        body {
+            background-color: rgba(253, 224, 220, 0.6);
+            background-blend-mode: multiply;
+            background-image: url(https://img.freepik.com/free-vector/animal-pattern-background-colorful-seamless-line-art-design-vector_53876-151381.jpg?t=st=1645768900~exp=1645769500~hmac=751fc86c66f80dbf80577dcc99673f40e91e5400ba307fc026425c2e44b5a9a0&w=1380);
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: larger;
+            text-align: center;
+        }
+    </style>
 
 </head>
 
 <body>
-
+    
+    
     <div class="container mt-5">
-        <table id="table_id" class="table table-striped table-hover">
+        <table id="table_id" class="table table-hover">
+            <!-- <table  id="table_id" class="table table-hover" style="background-color: rgba(245, 180, 180, 0.6);"> -->
             <thead>
-                <tr>
-                    <th>編號</th>
-                    <th>寵物登記機構名稱</th>
-                    <th>地址</th>
-                    <th>電話</th>
+                <tr class="table-danger">
+                    <th scope="col">編號</th>
+                    <th scope="col">寵物登記機構名稱</th>
+                    <th scope="col">地址</th>
+                    <th scope="col">電話</th>
                 </tr>
             </thead>
         </table>
     </div>
-
-
     <!-- Bootstrap Separate CSS複製來的-->
     <!-- sim版本有問題，她沒有ajax功能，所以註解掉...?-->
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" -->
@@ -60,21 +65,6 @@
     <script src="../js/animal.js"></script>
     <script>
         $(document).ready(function () {
-            // console.log('Array.isArray(dataStore)', Array.isArray(dataStore));
-            newDataStore = {};
-            dataStore.forEach((value, key) => {
-                // console.log('value',value);
-                if (value.area == '北部') {
-                    newDataStore[key] = { area: '北部12345' };
-                    newDataStore[key] = { 寵物登記機構名稱: value.寵物登記機構名稱 };
-                    newDataStore[key] = { 地址: value.地址 };
-                    newDataStore[key] = { 電話: value.電話 };
-                    // newDataStore[key] = { area: '北部67890', district: value.district, name: value.name, address: value.address, tel: value.tel, web: value.web };
-                }
-            });
-            console.log('newDataStore', newDataStore);
-            console.log('ataStore', dataStore);
-            
             $('#table_id').DataTable({
                 data: dataStore,
                 columns: [
@@ -83,9 +73,6 @@
                     { data: '地址' },
                     { data: '電話' },
                 ]
-            });
-            $('#btn').on('click', function () {
-                console.log('btn ok 0127');
             });
         });
     </script>
