@@ -25,14 +25,24 @@
             font-size: larger;
             text-align: center;
         }
+
+        th:first-child {
+            border-top-left-radius: 20px;
+        }
+
+        th:last-child {
+            border-top-right-radius: 20px;
+        }
+        
     </style>
 
 </head>
 
 <body>
+    <div class="container mt-5 bg-danger text-white" style="border-radius: 30px;">
+        <h1>寵物登記站名冊(作業使用資料)</h1>
     
-    
-    <div class="container mt-5">
+    <div class="container mt-2">
         <table id="table_id" class="table table-hover">
             <!-- <table  id="table_id" class="table table-hover" style="background-color: rgba(245, 180, 180, 0.6);"> -->
             <thead>
@@ -44,6 +54,7 @@
                 </tr>
             </thead>
         </table>
+    </div>
     </div>
     <!-- Bootstrap Separate CSS複製來的-->
     <!-- sim版本有問題，她沒有ajax功能，所以註解掉...?-->
