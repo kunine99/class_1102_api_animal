@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <title>Document</title>
+    <title>Api作業</title>
     <!-- google 搜尋 cdn jquery 點jQuery 3.x的sim檔-->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
@@ -33,7 +32,33 @@
         th:last-child {
             border-top-right-radius: 20px;
         }
-        
+
+        @media only screen and (max-width: 600px){
+            .c1 {
+                width: 60%;
+            }
+            #table_id{
+                width: 60%;
+            }
+            body {
+                background-color: rgb(221, 170, 211);
+            }
+        }
+        /* media query */
+        @media only screen and (max-width: 300px){
+
+           .c1{
+                width: 30%;
+            }
+            #table_id{
+                width: 30%;
+            }
+            body {
+                background-color: rgb(255, 241, 211);
+            }
+        }
+
+
     </style>
 
 </head>
@@ -41,20 +66,25 @@
 <body>
     <div class="container mt-5 bg-danger text-white" style="border-radius: 30px;">
         <h1>寵物登記站名冊(作業使用資料)</h1>
-    
-    <div class="container mt-2">
-        <table id="table_id" class="table table-hover">
-            <!-- <table  id="table_id" class="table table-hover" style="background-color: rgba(245, 180, 180, 0.6);"> -->
-            <thead>
-                <tr class="table-danger">
-                    <th scope="col">編號</th>
-                    <th scope="col">寵物登記機構名稱</th>
-                    <th scope="col">地址</th>
-                    <th scope="col">電話</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
+
+        <div class="container mt-2">
+            <table id="table_id" class="table table-hover">
+                <!-- <table  id="table_id" class="table table-hover" style="background-color: rgba(245, 180, 180, 0.6);"> -->
+                <thead>
+                    <tr class="table-danger" id="c1" >
+                        <th scope="col">編號</th>
+                        <th scope="col">寵物登記機構名稱</th>
+                        <th scope="col">地址</th>
+                        <th scope="col">電話</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+
+        <div class="p-3 text-center text-light">@ 2021 泰山php班第2期 資料來源自台北市資料大平臺</div>
+
+
     </div>
     <!-- Bootstrap Separate CSS複製來的-->
     <!-- sim版本有問題，她沒有ajax功能，所以註解掉...?-->
