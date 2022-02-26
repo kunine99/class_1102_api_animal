@@ -31,11 +31,24 @@
 
         th:last-child {
             border-top-right-radius: 20px;
+        }  
+             
+        @media only screen and (max-width: 1024px){
+            .c1 {
+                width: 100%;
+            }
+            #table_id{
+                width: 120%;
+            }
+            body {
+                background-color: rgba(253, 224, 220, 0.6);
+            }
         }
+
 
         @media only screen and (max-width: 600px){
             .c1 {
-                width: 60%;
+                width: 100%;
             }
             #table_id{
                 width: 60%;
@@ -44,19 +57,27 @@
                 background-color: rgb(221, 170, 211);
             }
         }
-        /* media query */
+
+
         @media only screen and (max-width: 300px){
 
            .c1{
                 width: 30%;
             }
             #table_id{
-                width: 30%;
+                width: 10%;
             }
             body {
                 background-color: rgb(255, 241, 211);
             }
         }
+
+
+
+
+
+
+
 
 
     </style>
@@ -103,7 +124,7 @@
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
 
-    <script src="../js/animal.js"></script>
+    <script src="./js/animal.js"></script>
     <script>
         $(document).ready(function () {
             $('#table_id').DataTable({
